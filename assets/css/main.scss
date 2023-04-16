@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+body {
+	background-color: #F7F6F9;
+	font-family: 'Open Sans', sans-serif;
+	color: #000000;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 500;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin: 35px 0 50px 0;
+
+	a {
+		color: #000000;
+		text-decoration: none;
+		padding: 10px 30px !important;
+
+		&.router-link-active {
+			border: 2px solid #B8B8B8;
+		}
+	}
+}
+
+.box {
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.01);
+	-moz-box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.01);
+	box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.01);
+	border-radius: 15px;
+	padding: 20px 10px;
+	border: 2px solid transparent;
+
+	&.clickable {
+		cursor: pointer;
+
+		&:hover {
+			background-color: #fafafa;
+		}
+	}
+
+	&.selected {
+		border: 2px solid #B8B8B8;
+	}
+}
+
+.info {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+	.weatherBlock {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+
+		.name {
+			font-style: italic;
+		}
+
+		.weather {
+			width: 40px;
+		}
+
+		.temp {
+			display: flex;
+			gap: 10px;
+			font-size: 10pt;
+			font-weight: 700;
+
+			.min {
+				color: #B8B8B8;
+			}
+		}
+
+		.rain {
+			display: flex;
+			align-items: center;
+			gap: 3px;
+			font-size: 10pt;
+
+			img {
+				width: 23px;
+			}
+
+			.small {
+				font-size: 7pt;
+			}
+		}
+	}
+}
